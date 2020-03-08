@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="MainMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #e6fff8;"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="employeeDatabase.controllers.MainMenuController">
+    <TextField fx:id="EmployeeID" layoutX="25.0" layoutY="100.0" prefWidth="240.0"
+               promptText="Employee ID (enter number)"/>
+    <TextField fx:id="Surname" layoutX="25.0" layoutY="130.0" prefWidth="240.0" promptText="Surname"/>
+    <TextField fx:id="Name" layoutX="25.0" layoutY="160.0" prefWidth="240.0" promptText="Name"/>
+    <TextField fx:id="FathersName" layoutX="25.0" layoutY="190.0" prefWidth="240.0"
+               promptText="Father`s name (optional)"/>
+    <DatePicker fx:id="DateOfBirth" layoutX="25.0" layoutY="220.0" prefHeight="27.0" prefWidth="240.0"
+                promptText="Date of birth"/>
+    <TextField fx:id="JobPosition" layoutX="25.0" layoutY="250.0" prefWidth="240.0" promptText="Job position"/>
+    <TextField fx:id="Department" layoutX="25.0" layoutY="280.0" prefWidth="240.0" promptText="Department"/>
+    <TextField fx:id="RoomNumber" layoutX="25.0" layoutY="310.0" prefWidth="240.0"
+               promptText="Room number (enter number)"/>
+    <TextField fx:id="WorkNumber" layoutX="25.0" layoutY="340.0" prefWidth="240.0"
+               promptText="Work number (+380 XX XXX-XX-XX)"/>
+    <TextField fx:id="WorkEmail" layoutX="25.0" layoutY="370.0" prefWidth="240.0" promptText="Work email"/>
+    <TextField fx:id="Salary" layoutX="25.0" layoutY="400.0" prefWidth="240.0" promptText="Salary (UAH)"/>
+    <DatePicker fx:id="ApprovalDay" layoutX="25.0" layoutY="430.0" prefHeight="27.0" prefWidth="240.0"
+                promptText="Approval day"/>
+    <TextField fx:id="Note" layoutX="25.0" layoutY="460.0" prefWidth="240.0" promptText="Note"/>
+    <Button layoutX="25.0" layoutY="826.0" mnemonicParsing="false" onAction="#buttonLogOut" prefHeight="48.0"
+            prefWidth="240.0" text="Log out" textFill="#767676">
+        <font>
+            <Font name="Avenir Light" size="14.0"/>
+        </font>
+    </Button>
+    <Button layoutX="25.0" layoutY="720.0" mnemonicParsing="false" onAction="#buttonCreateReport" prefHeight="48.0"
+            prefWidth="240.0" text="Create report" textFill="#767676">
+        <font>
+            <Font name="Avenir Light" size="14.0"/>
+        </font>
+    </Button>
+    <Button layoutX="148.0" layoutY="495.0" mnemonicParsing="false" onAction="#buttonUpdate" prefHeight="65.0"
+            prefWidth="117.0" text="Update" textFill="#767676">
+        <font>
+            <Font name="Avenir Light" size="14.0"/>
+        </font>
+    </Button>
+    <Button layoutX="148.0" layoutY="565.0" mnemonicParsing="false" onAction="#buttonDelete" prefHeight="65.0"
+            prefWidth="117.0" text="Delete " textFill="#767676">
+        <font>
+            <Font name="Avenir Light" size="14.0"/>
+        </font>
+    </Button>
+    <TextField fx:id="Search" layoutX="1182.0" layoutY="62.0" prefWidth="240.0" promptText="Search"/>
+    <Label layoutX="25.0" layoutY="65.0" text="Create new employee" textFill="#767676">
+        <font>
+            <Font name="Avenir Light" size="18.0"/>
+        </font>
+    </Label>
+    <Button layoutX="25.0" layoutY="495.0" mnemonicParsing="false" onAction="#buttonAdd" prefHeight="65.0"
+            prefWidth="117.0" text="Add " textFill="#767676">
+        <font>
+            <Font name="Avenir Light" size="14.0"/>
+        </font>
+    </Button>
+    <Label layoutX="25.0" layoutY="15.0" text="Database of employees" textFill="#767676">
+        <font>
+            <Font name="Avenir Light" size="24.0"/>
+        </font>
+    </Label>
+    <TableView fx:id="TableOfDatabase" layoutX="280.0" layoutY="100.0" onMouseClicked="#ShowOnClick" prefHeight="530.0"
+               prefWidth="1142.0">
+        <columns>
+            <TableColumn fx:id="columnEmployeeID" prefWidth="50.0" text="ID"/>
+            <TableColumn fx:id="columnSurname" prefWidth="91.0" text="Surname"/>
+            <TableColumn fx:id="columnName" prefWidth="91.0" text="Name"/>
+            <TableColumn fx:id="columnFathersName" prefWidth="91.0" text="Father`s name"/>
+            <TableColumn fx:id="columnDateOfBirth" prefWidth="91.0" text="Date of birth"/>
+            <TableColumn fx:id="columnJobPosition" prefWidth="91.0" text="Job position"/>
+            <TableColumn fx:id="columnDepartment" prefWidth="91.0" text="Department"/>
+            <TableColumn fx:id="columnRoomNumber" prefWidth="91.0" text="Room number"/>
+            <TableColumn fx:id="columnWorkNumber" prefWidth="91.0" text="Work number"/>
+            <TableColumn fx:id="columnWorkEmail" prefWidth="91.0" text="Work email"/>
+            <TableColumn fx:id="columnSalary" prefWidth="91.0" text="Salary"/>
+            <TableColumn fx:id="columnApprovalDay" prefWidth="91.0" text="Approval day"/>
+            <TableColumn fx:id="columnNote" prefWidth="91.0" text="Note"/>
+        </columns>
+    </TableView>
+    <TextArea fx:id="ResultConsole" layoutX="280.0" layoutY="685.0" prefHeight="189.0" prefWidth="560.0"/>
+    <Label layoutX="280.0" layoutY="650.0" text="Result console" textFill="#767676">
+        <font>
+          <Font name="Avenir Light" size="18.0"/>
+        </font>
+    </Label>
+    <Label layoutX="860.0" layoutY="650.0" text="Changes tracker" textFill="#767676">
+        <font>
+          <Font name="Avenir Light" size="18.0"/>
+        </font>
+    </Label>
+    <TableView fx:id="TableChangesTracker" layoutX="860.0" layoutY="685.0" prefHeight="189.0" prefWidth="560.0">
+      <columns>
+          <TableColumn fx:id="columnEvent" prefWidth="280.0" text="Event"/>
+          <TableColumn fx:id="columnDate" prefWidth="280.0" text="Date"/>
+      </columns>
+    </TableView>
+    <TextField fx:id="SearchTracker" layoutX="1182.0" layoutY="652.0" prefWidth="240.0" promptText="Search changes"/>
+    <Button layoutX="25.0" layoutY="773.0" mnemonicParsing="false" onAction="#buttonCreateReportCT" prefHeight="48.0"
+            prefWidth="240.0" text="Create changes tracker report" textFill="#767676">
+        <font>
+          <Font name="Avenir Light" size="14.0"/>
+        </font>
+    </Button>
+    <Button layoutX="25.0" layoutY="565.0" mnemonicParsing="false" onAction="#buttonClear" prefHeight="65.0"
+            prefWidth="117.0" text="Clear" textFill="#767676">
+        <font>
+          <Font name="Avenir Light" size="14.0"/>
+        </font>
+    </Button>
+    <TextField fx:id="ReportNameField" layoutX="25.0" layoutY="685.0" prefHeight="27.0" prefWidth="240.0"
+               promptText="Report name"/>
+</AnchorPane>

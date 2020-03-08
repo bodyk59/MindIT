@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #e6fff8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employeeDatabase.controllers.LoginController">
+   <children>
+      <Label fx:id="LoginLabel" layoutX="25.0" layoutY="25.0" text="Login" textFill="#767676">
+         <font>
+            <Font name="Avenir Light" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="UsernameField" layoutX="25.0" layoutY="63.0" prefHeight="27.0" prefWidth="240.0" promptText="Username" />
+      <PasswordField fx:id="PasswordField" layoutX="25.0" layoutY="93.0" prefHeight="27.0" prefWidth="240.0" promptText="Password" />
+      <Button layoutX="195.0" layoutY="139.0" mnemonicParsing="false" onAction="#buttonConfirm" prefWidth="70.0" text="Confirm" textFill="#767676" />
+   </children>
+</AnchorPane>
